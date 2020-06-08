@@ -24,11 +24,11 @@ public class Mostrar extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      Persona p= new Persona();
+      Persona p= new Persona("dui","apellidos", "nombres");
         ArrayList<Persona> personas = new ArrayList();
         personas = p.consultarRegistros();
         request.getSession().setAttribute("personas",personas);
-        request.getRequestDispatcher("mostrartodo.jsp").forward(request, response);
+        request.getRequestDispatcher("Mostrartodo.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
